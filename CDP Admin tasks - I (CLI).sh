@@ -2,10 +2,19 @@
             CDP Admin tasks - I (CLI)
 *********************************************
 
+#login with hdfs user (enable hdfs user)
+
+$ sudo passwd hdfs    //set password
+
+$ sudo nano /etc/passwd           // search for hdfs >> remove /usr/sbin/nologin >> add /bin/bash
+
+$ sudo adduser hdfs sudo          // add hdfs to sudo
 
 # Safemode
 
-hdfs dfsadmin -safemode get
+hdfs dfsadmin -safemode get         
+
+# options = get | enter | leave | wait | forceExit
 
 -----***** Creating snapshots ****----
 
